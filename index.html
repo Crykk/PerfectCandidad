@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recruit Green - Job Application Builder</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Recruit Green</h1>
+    <p>Create, publish, and manage job application forms with unique applicant links.</p>
+  </header>
+
+  <main id="app" class="app-container"></main>
+
+  <template id="recruiter-template">
+    <section class="panel">
+      <h2>Recruiter Form Builder</h2>
+      <div class="grid two-col">
+        <label>
+          Job Title
+          <input id="jobTitle" type="text" placeholder="Senior Frontend Engineer" />
+        </label>
+        <label>
+          Team / Department
+          <input id="jobDepartment" type="text" placeholder="Product Engineering" />
+        </label>
+      </div>
+      <label>
+        Job Description
+        <textarea id="jobDescription" rows="4" placeholder="Describe responsibilities, expectations, and role impact."></textarea>
+      </label>
+
+      <div class="question-header">
+        <h3>Application Questions</h3>
+        <button id="addQuestionBtn" class="secondary">+ Add Question</button>
+      </div>
+      <div id="questionList" class="stack"></div>
+
+      <div class="actions">
+        <button id="saveDraftBtn" class="secondary">Save Draft</button>
+        <button id="publishBtn">Publish Form</button>
+      </div>
+      <p id="publishStatus" class="muted"></p>
+    </section>
+
+    <section class="panel">
+      <h2>Published Forms</h2>
+      <div id="publishedForms" class="stack"></div>
+    </section>
+  </template>
+
+  <template id="candidate-template">
+    <section class="panel">
+      <h2 id="candidateJobTitle"></h2>
+      <p id="candidateMeta" class="muted"></p>
+      <p id="candidateJobDescription"></p>
+      <form id="applicationForm" class="stack"></form>
+      <p id="applicationFeedback" class="success"></p>
+    </section>
+  </template>
+
+  <template id="application-template">
+    <section class="panel">
+      <h2>Application Submitted</h2>
+      <p id="applicationSummary"></p>
+      <p><strong>Unique identifier link:</strong></p>
+      <a id="applicationLink" class="link" href="#"></a>
+      <p class="muted">Share this link with recruiters for status tracking.</p>
+    </section>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
