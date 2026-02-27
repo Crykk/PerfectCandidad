@@ -1,0 +1,183 @@
+:root {
+  --green-900: #0f3f2f;
+  --green-700: #1f7a4d;
+  --green-500: #2da564;
+  --green-200: #cdeeda;
+  --bg: #f3fcf6;
+  --white: #ffffff;
+  --text: #163024;
+  --muted: #4f665a;
+  --danger: #b53131;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app-header {
+  background: linear-gradient(120deg, var(--green-900), var(--green-700));
+  color: var(--white);
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.app-header p {
+  margin: 0.5rem auto 0;
+  max-width: 680px;
+  opacity: 0.95;
+}
+
+.app-container {
+  max-width: 1080px;
+  margin: 1.5rem auto;
+  padding: 0 1rem 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.panel {
+  background: var(--white);
+  border: 1px solid var(--green-200);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 6px 20px rgba(15, 63, 47, 0.08);
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+.grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.two-col {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.stack {
+  display: grid;
+  gap: 0.75rem;
+}
+
+label {
+  display: grid;
+  gap: 0.4rem;
+  font-weight: 600;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+input,
+textarea,
+select {
+  border: 1px solid #9dcab1;
+  border-radius: 10px;
+  padding: 0.65rem 0.75rem;
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
+  background: var(--green-700);
+  color: var(--white);
+  padding: 0.65rem 1rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+button:hover {
+  background: var(--green-500);
+}
+
+button.secondary {
+  background: #e8f7ee;
+  color: var(--green-900);
+  border: 1px solid #a2d6b9;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+}
+
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.question-card {
+  border: 1px dashed #9dcab1;
+  border-radius: 12px;
+  padding: 0.8rem;
+  background: #f9fefb;
+}
+
+.question-card .inline {
+  display: grid;
+  grid-template-columns: 2fr 1fr auto;
+  gap: 0.5rem;
+}
+
+.inline-check {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.92rem;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.success {
+  color: var(--green-700);
+  font-weight: 700;
+}
+
+.error {
+  color: var(--danger);
+  font-weight: 700;
+}
+
+.form-link {
+  display: block;
+  word-break: break-all;
+  color: var(--green-700);
+}
+
+.form-item {
+  border: 1px solid #bde3ca;
+  border-radius: 12px;
+  padding: 0.75rem;
+  background: #fbfffc;
+}
+
+.link {
+  color: var(--green-700);
+  word-break: break-all;
+}
+
+@media (max-width: 760px) {
+  .question-card .inline {
+    grid-template-columns: 1fr;
+  }
+}
